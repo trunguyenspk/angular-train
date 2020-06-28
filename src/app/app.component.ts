@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-self-train';
+
+  user = {
+    name: "user name",
+    age: 20
+  };
+
+  type = 'text';
+
+  onClickHanle() {
+    alert("Inside Angular Component method");
+  }
+
 }
