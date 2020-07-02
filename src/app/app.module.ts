@@ -4,11 +4,12 @@ import {FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SubAppComponent } from './hello.component'
+import { InputInteractionComponent } from './input-interaction/input-interaction.component';
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
+    InputInteractionComponent,
   ],
   imports: [
     BrowserModule,
@@ -16,7 +17,7 @@ import { SubAppComponent } from './hello.component'
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent, ]
+  bootstrap: [AppComponent]
 })
 
 export class AppModule { }

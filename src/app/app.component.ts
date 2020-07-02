@@ -16,7 +16,7 @@ export class AppComponent {
   type = 'text';
 
   onClickHanle() {
-    alert("Inside Angular Component method");
+    alert("Inside APP Component method");
   }
 
 }
