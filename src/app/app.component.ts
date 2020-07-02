@@ -13,10 +13,8 @@ export class AppComponent {
     age: 20
   };
 
-  type = 'text';
-
   onClickHanle() {
-    alert("Inside APP Component method");
+    alert("alert onClickHanle");
   }
 
 }
