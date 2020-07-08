@@ -9,7 +9,7 @@ import { Author } from '../authors';
 })
 export class AuthorDetailComponent implements OnInit {
   @Input() author: Author;
-  @Output() deleteAuthor = new EventEmitter<Author>();
+  @Output() deleteAuthorEvent = new EventEmitter<Author>();
 
   constructor() { }
 
@@ -18,7 +18,7 @@ export class AuthorDetailComponent implements OnInit {
   }
 
   handleDelete() {
-    this.deleteAuthor.emit(this.author);
+    this.deleteAuthorEvent.emit(this.author);
   }
 
 }
