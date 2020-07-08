@@ -1,3 +1,10 @@
 <app-author-detail
-    *ngFor="let author of authors" [author]="author" (deleteAuthorEvent)="handleDelete($event)">
+    *ngFor="let author of authors" [author]="author" 
+    (deleteAuthorFromDetailEvent)="handleDeleteOnParent($event)"
+    (getNameAuthorFromDetailEvent)="handleSelectOnParent($event)">
 </app-author-detail>
+
+
+<div>
+    current: <b style="color: blue;">{{currentAuthor?.firstName}}</b>
+</div>

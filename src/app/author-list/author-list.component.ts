@@ -11,13 +11,20 @@ export class AuthorListComponent implements OnInit {
 
   authors = authors;
 
+  currentAuthor = authors[0];
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
-  handleDelete(author: Author) {
+  handleDeleteOnParent(author: Author) {
     this.authors = this.authors.filter((item) => item.id !== author.id);
+  }
+
+  handleSelectOnParent(author: Author){
+    this.currentAuthor = author;
   }
 
 }
