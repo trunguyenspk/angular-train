@@ -8,13 +8,23 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class AppComponent {
   title = 'angular-self-train';
 
+  inputType = 'text';
+
   user = {
-    name: "user name",
+    name: "user value",
     age: 20
   };
 
+  two_way_bind = "two_way_bind_value";
+
+  isCheck = true;
+
   onClickHanle() {
-    alert(this.title);
+    alert('onClickHanle');
+  }
+
+  handlecustomChangeName(event){
+    this.isCheck = event;
   }
 
 }

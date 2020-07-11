@@ -9,6 +9,7 @@ import { Author } from '../authors';
 })
 export class AuthorDetailComponent implements OnInit {
   @Input() author: Author;
+  
   @Output() deleteAuthorFromDetailEvent = new EventEmitter<Author>();
   @Output() getNameAuthorFromDetailEvent = new EventEmitter<Author>();
 

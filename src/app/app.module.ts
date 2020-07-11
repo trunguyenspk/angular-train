@@ -7,18 +7,20 @@ import { AppComponent } from './app.component';
 import { InputInteractionComponent } from './input-interaction/input-interaction.component';
 import { AuthorListComponent } from './author-list/author-list.component';
 import { AuthorDetailComponent } from './author-detail/author-detail.component';
+import { ToggleCustomBindingComponent } from './toggle-custom-binding/toggle-custom-binding.component';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
   declarations: [
     AppComponent,
     InputInteractionComponent,
     AuthorListComponent,
     AuthorDetailComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    ToggleCustomBindingComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
