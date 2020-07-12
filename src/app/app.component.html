@@ -328,15 +328,21 @@
   </div>
   -->
 
-  <div inday=009>
+  <div inday=009-custom-binding>
     <app-toggle-custom-binding [(checked)]="isCheck">
     </app-toggle-custom-binding>
     <!--OR-->
     <app-toggle-custom-binding [checked]="isCheck" (customChangeName)="isCheck=$event">
     </app-toggle-custom-binding>
     <!--OR-->
-    <app-toggle-custom-binding [checked]="isCheck" (customChangeName)="handlecustomChangeName($event)">
+    <app-toggle-custom-binding #templateVariableName [checked]="isCheck" (customChangeName)="handlecustomChangeName($event)">
     </app-toggle-custom-binding>
+
+    <button (click)="templateVariableName.toggle()">Toggle</button>
+    <button (click)="templateVariableName.templateVariableMethod()">templateVariableMethod</button>
+
+    <button (click)="toggleInside()">Toggle inside class</button>
+
   </div>
 
 </div>

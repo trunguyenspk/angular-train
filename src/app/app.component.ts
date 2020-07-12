@@ -1,4 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, 
+  ViewChild, ViewChildren, 
+  ElementRef, QueryList } from '@angular/core';
+
+import {ToggleCustomBindingComponent} from './toggle-custom-binding/toggle-custom-binding.component';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +10,19 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-self-train';
+
+  @ViewChild("templateVariableName") toggleComp: ToggleCustomBindingComponent;
+  // OR : @ViewChild(ToggleCustomBindingComponent) toggleComp: ToggleCustomBindingComponent;
+
+  toggleInside() {
+    this.toggleComp.toggle();
+  }
+
+  @ViewChildren(ToggleCustomBindingComponent) toggleList: QueryList<ToggleCustomBindingComponent>; // return n components
+
+  ngAfterViewInit() {
+    console.log(this.toggleList);
+  }
 
   inputType = 'text';
 
@@ -27,4 +43,17 @@ export class AppComponent {
     this.isCheck = event;
   }
 
+  tsDataType(){
+    let a:User; 
+    
+    a.name = "a"
+
+    a.age= 123;
+  }
+
+}
+
+interface User{
+  name:string,
+  age:number
 }

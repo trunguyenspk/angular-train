@@ -17,4 +17,8 @@ export class ToggleCustomBindingComponent implements OnInit {
   toggle() {
     this.customChangeName.emit(!this.checked);
   }
+
+  templateVariableMethod(){
+    alert("templateVariableMethod is called.");
+  }
 }
